@@ -13,9 +13,7 @@ export default function Hero() {
       id="hero" 
       className="relative h-screen w-full flex items-center bg-linear-to-br from-[#263A4F]/50 to-teal-900/60 overflow-hidden"
     >
-      
 
-      {/* --- 3. CONTEÚDO --- */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         
         <h1 className="text-5xl poppins-bold md:text-7xl font-bold mb-6 tracking-tight text-white drop-shadow-lg">

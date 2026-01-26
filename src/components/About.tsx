@@ -26,7 +26,6 @@ export default function About() {
   return (
     <section id="about" className="py-24 bg-white text-gray-900 relative overflow-hidden">
       
-      {/* Elemento decorativo de fundo (opcional) */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-900/10 blur-3xl rounded-full pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">

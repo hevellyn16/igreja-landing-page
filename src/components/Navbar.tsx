@@ -2,13 +2,10 @@ import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  // Novo estado para controlar se a página foi rolada
   const [scrolled, setScrolled] = useState(false);
 
-  // Efeito para detectar o scroll
   useEffect(() => {
     const handleScroll = () => {
-      // Se rolar mais de 50px, ativa o fundo sólido
       if (window.scrollY > 50) {
         setScrolled(true);
       } else {
@@ -32,17 +29,15 @@ export default function Navbar() {
     { name: 'Nossa história', id: 'about' },
     { name: 'Cronograma de cultos', id: 'time' },
     { name: 'Saiba onde nos encontrar', id: 'local' },
-    { name: 'Contato', id: '' },
+    { name: 'Contato', id: 'contato' },
   ];
 
   return (
-    // AQUI ESTÁ A MÁGICA:
-    // Mudamos a classe dinamicamente baseada no estado 'scrolled'
     <nav className={`
         fixed top-0 left-0 w-full z-50 transition-all poppins-regular duration-300
         ${scrolled 
-            ? 'bg-[#263A4F]/95 backdrop-blur-md shadow-lg py-2' // Quando rola: Fundo Roxo Escuro Sólido + Sombra
-            : 'bg-transparent py-4' // No topo: Transparente e mais espaçado
+            ? 'bg-[#263A4F]/95 backdrop-blur-md shadow-lg py-2' 
+            : 'bg-transparent py-4' 
         }
     `}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">

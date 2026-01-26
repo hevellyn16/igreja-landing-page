@@ -48,7 +48,6 @@ export default function Local() {
         <div className="relative h-125 w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white animate-fade-in-up delay-200 group">
           
           {/* Iframe do Google Maps */}
-          {/* DICA: Para pegar o link certo, vá no Google Maps > Compartilhar > Incorporar um mapa > Copiar HTML e pegue apenas o SRC */}
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.5142636225755!2d-40.366149624978895!3d-3.697273496276697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7eac6f6c10e08c5%3A0xa5c676de1b4d601d!2sIgreja%20Batista%20Betel%20de%20Sobral!5e0!3m2!1spt-BR!2sbr!4v1769437794971!5m2!1spt-BR!2sbr" 
             width="100%" 
@@ -57,12 +56,9 @@ export default function Local() {
             allowFullScreen={true} 
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade"
-            // O segredo do visual "clean": Grayscale no mapa
             className="w-full h-full grayscale-20 group-hover:grayscale-0 transition-all duration-700"
           ></iframe>
 
-          {/* O PINO PERSONALIZADO (Flutuando sobre o mapa para ficar igual à imagem) */}
-          {/* Como o iframe é interativo, esse pino é só decorativo visual, o pino real do Google Maps vai estar lá também */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
             <span className="relative flex h-8 w-8">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
