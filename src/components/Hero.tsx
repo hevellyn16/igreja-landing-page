@@ -8,6 +8,13 @@ export default function Hero() {
     }
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section 
       id="hero" 
@@ -25,11 +32,17 @@ export default function Hero() {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 animate-fade-in-up delay-300">
-          <button className="bg-white text-[#263A4F] px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-gray-100 transition-transform hover:-translate-y-1 shadow-xl">
+          <button 
+            onClick={() => scrollToSection('time')} // Chama a função buscando o ID 'time'
+            className="bg-white text-[#263A4F] px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-gray-100 transition-transform hover:-translate-y-1 shadow-xl"
+          >
             Nossos Cultos
           </button>
-          
-          <button className="border border-white/30 text-white px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-white/10 transition-colors backdrop-blur-sm hover:-translate-y-1 shadow-xl">
+
+          <button 
+            onClick={() => scrollToSection('contato')} // Chama a função buscando o ID 'contato'
+            className="border border-white/30 text-white px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-white/10 transition-colors backdrop-blur-sm hover:-translate-y-1 shadow-xl"
+          >
             Fale Conosco
           </button>
         </div>
