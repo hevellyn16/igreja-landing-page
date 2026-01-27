@@ -34,14 +34,14 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 animate-fade-in-up delay-300">
           <button 
             onClick={() => scrollToSection('time')} // Chama a função buscando o ID 'time'
-            className="bg-white text-[#263A4F] px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-gray-100 transition-transform hover:-translate-y-1 shadow-xl"
+            className="bg-white cursor-pointer text-[#263A4F] px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-gray-100 transition-transform hover:-translate-y-1 shadow-xl"
           >
             Nossos Cultos
           </button>
 
           <button 
             onClick={() => scrollToSection('contato')} // Chama a função buscando o ID 'contato'
-            className="border border-white/30 text-white px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-white/10 transition-colors backdrop-blur-sm hover:-translate-y-1 shadow-xl"
+            className="border border-white/30 cursor-pointer text-white px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-white/10 transition-colors backdrop-blur-sm hover:-translate-y-1 shadow-xl"
           >
             Fale Conosco
           </button>

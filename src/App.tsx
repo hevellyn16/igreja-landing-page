@@ -1,9 +1,9 @@
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import About from "./components/About"
-import Time from "./components/Time"
-import Local from "./components/Local"
-import Footer from "./components/Footer"
+import Navbar from "./sections/Navbar"
+import Hero from "./sections/Hero"
+import About from "./sections/About"
+import Time from "./sections/Time"
+import Local from "./sections/Local"
+import Footer from "./sections/Footer"
 
 function App() {
 

@@ -56,7 +56,7 @@ export default function Navbar() {
             <button
               key={item.name}
               onClick={() => scrollToSection(item.id)}
-              className="text-sm font-medium text-white/90 hover:text-white transition-all hover:bg-white/10 px-4 py-2 rounded-full"
+              className="text-sm cursor-pointer font-medium text-white/90 hover:text-white transition-all hover:bg-white/10 px-4 py-2 rounded-full"
             >
               {item.name}
             </button>
@@ -86,7 +86,7 @@ export default function Navbar() {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className="text-3xl font-bold text-white hover:text-purple-400 transition-colors"
+                className="text-3xl cursor-pointer font-bold text-white hover:text-purple-400 transition-colors"
               >
                 {item.name}
               </button>

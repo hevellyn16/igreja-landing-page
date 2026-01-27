@@ -8,13 +8,13 @@ export default function Local() {
         {/* LADO ESQUERDO: Texto e Informações */}
         <div className="space-y-8 animate-fade-in-up">
           <div>
-            <span className="text-blue-600 font-bold tracking-wider uppercase text-sm">Localização</span>
+            <span className="poppins-bold text-blue-600 tracking-wider uppercase text-sm">Localização</span>
             <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold mt-2 text-slate-900 leading-tight">
               Saiba onde nos <br/>encontrar
             </h2>
           </div>
 
-          <p className="text-gray-600 text-lg leading-relaxed max-w-md">
+          <p className="text-gray-600 poppins-regular text-lg leading-relaxed max-w-md">
             Nossas portas estão sempre abertas para receber você e sua família. Venha nos fazer uma visita e tomar um café conosco.
           </p>
 
@@ -22,11 +22,11 @@ export default function Local() {
             {/* Item de Endereço */}
             <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
               <div className="bg-blue-100 p-3 rounded-full text-blue-600">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                <img src="/pin-drop.svg" alt="Location Icon" className="h-6 w-6"/>
               </div>
               <div>
-                <h4 className="font-bold text-slate-900 text-lg">Endereço</h4>
-                <p className="text-gray-600">
+                <h4 className="poppins-bold text-slate-900 text-lg">Endereço</h4>
+                <p className="text-gray-600 poppins-regular leading-relaxed">
                   Rua São Judas Tadeu, 156 <br/>
                   Bairro Sumaré, Sobral - CE
                 </p>
@@ -38,7 +38,7 @@ export default function Local() {
             href="https://www.google.com/maps/dir/?api=1&destination=Igreja+Batista+Betel+Independente+Sobral" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-full shadow-lg hover:bg-blue-700 hover:shadow-blue-500/30 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
+            className="inline-flex items-center justify-center px-8 py-4 text-base poppins-bold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-full shadow-lg hover:bg-blue-700 hover:shadow-blue-500/30 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
           >
             Traçar Rota no GPS
           </a>
@@ -54,6 +54,7 @@ export default function Local() {
             height="100%" 
             style={{ border: 0 }} 
             allowFullScreen={true} 
+            title="Localização"
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade"
             className="w-full h-full grayscale-20 group-hover:grayscale-0 transition-all duration-700"
@@ -70,8 +71,8 @@ export default function Local() {
 
           {/* Card Flutuante de Endereço (Estilo App) */}
           <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/50 md:hidden">
-             <p className="text-sm font-bold text-slate-800">Igreja Batista Betel</p>
-             <p className="text-xs text-gray-500">Sobral - Ceará</p>
+             <p className="text-sm poppins-bold text-slate-800">Igreja Batista Betel</p>
+             <p className="text-xs poppins-regular text-gray-500">Sobral - Ceará</p>
           </div>
 
         </div>
