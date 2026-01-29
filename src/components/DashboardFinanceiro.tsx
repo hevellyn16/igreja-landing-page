@@ -208,8 +208,18 @@ const DashboardFinanceiro = () => {
   };
   const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
       e.preventDefault(); e.stopPropagation(); setDragActive(false);
+      
       if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-        setFile(e.dataTransfer.files[0]);
+        const droppedFile = e.dataTransfer.files[0];
+
+        // --- VERIFICAÇÃO DE TAMANHO (50MB) ---
+        if (droppedFile.size > 50 * 1024 * 1024) {
+           toast.error("Arquivo muito grande! O limite é 50MB.");
+           return;
+        }
+        // --------------------------------------
+
+        setFile(droppedFile);
         toast.success("Arquivo carregado!");
       }
   };
@@ -261,9 +271,20 @@ const DashboardFinanceiro = () => {
               className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
               onChange={(e) => {
                 if (e.target.files && e.target.files[0]) {
+                    const selectedFile = e.target.files[0];
+
+                    // --- VERIFICAÇÃO DE TAMANHO (50MB) ---
+                    if (selectedFile.size > 50 * 1024 * 1024) {
+                        toast.error("Arquivo muito grande! O limite é 50MB.");
+                        e.target.value = ''; // Limpa para poder tentar de novo
+                        return;
+                    }
+                    // --------------------------------------
+
                     setFile(e.target.files[0]);
                     toast.success("PDF selecionado!");
                 }
+
                 e.target.value = '';    
               }}
               accept=".pdf" 
