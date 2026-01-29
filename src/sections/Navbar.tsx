@@ -26,7 +26,7 @@ export default function Navbar() {
   // Lista atualizada: separei o ID do link normal
   const navItems = [
     { name: 'Nossa história', target: 'about', type: 'scroll' },
-    { name: 'Cronograma de cultos', target: 'time', type: 'scroll' },
+    { name: 'Nossa programação', target: 'time', type: 'scroll' },
     { name: 'Saiba onde nos encontrar', target: 'local', type: 'scroll' },
     { name: 'Contato', target: 'contato', type: 'scroll' },
     { name: 'Relatórios', target: '/financeiro', type: 'route' }, // Esse é uma rota!

@@ -44,7 +44,7 @@ export default function Time() {
         <div className="text-center mb-16">
           <span className="text-blue-600 poppins-bold tracking-wider uppercase text-sm">Nossa Agenda</span>
           <h2 className="text-4xl md:text-5xl font-['Playfair_Display'] font-bold mt-2 text-slate-900">
-            Dias de Culto
+            Nossa programação <br /> semanal de encontros
           </h2>
           <p className="text-gray-600 poppins-regular mt-4 max-w-2xl mx-auto font-medium">
             Reserve um tempo na sua semana para estar em comunhão.
