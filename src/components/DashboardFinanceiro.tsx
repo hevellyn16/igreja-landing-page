@@ -126,7 +126,7 @@ const DashboardFinanceiro = () => {
 
   // 3. Função de Excluir
   const handleExcluir = (item: { titulo: any; id: any; }) => {
-    // Em vez de window.confirm, chamamos um toast especial
+    
     toast((t) => (
       <div className="flex flex-col gap-2">
         <span className="font-medium text-slate-700">
@@ -227,7 +227,7 @@ const DashboardFinanceiro = () => {
   return (
     <div className="bg-white rounded-2xl p-6 mt-32 shadow-xl overflow-hidden flex flex-col md:flex-row">
       
-      {/* 2. ADICIONEI O COMPONENTE VISUAL AQUI */}
+      {/* 2.  COMPONENTE VISUAL AQUI */}
       <Toaster position="top-right" reverseOrder={false} />
 
       {/* LADO ESQUERDO: Formulário */}
