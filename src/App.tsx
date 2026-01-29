@@ -1,23 +1,36 @@
-import Navbar from "./sections/Navbar"
-import Hero from "./sections/Hero"
-import About from "./sections/About"
-import Time from "./sections/Time"
-import Local from "./sections/Local"
-import Footer from "./sections/Footer"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+ // Ajuste o caminho se necessário
+import Home from './pages/Home';
+import Financeiro from './pages/Finances';
+import Admin from './pages/Admin';
+import Login from './pages/Login';
+import RotaProtegida from './components/ProtectedRoute'; // Importe o segurança!
+import Navbar from './sections/Navbar';
 
 function App() {
-
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <About />
-      <Time />
-      <Local />
-      <Footer />
-
-    </div>
+    <BrowserRouter>
+      {/* Navbar fica fora pra aparecer em tudo, mas você pode esconder no login se quiser */}
+      <Navbar /> 
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/financeiro" element={<Financeiro />} />
+        <Route path="/login" element={<Login />} />
+        
+        {/* AQUI ESTÁ A PROTEÇÃO */}
+        <Route 
+          path="/admin" 
+          element={
+            <RotaProtegida>
+              <Admin />
+            </RotaProtegida>
+          } 
+        />
+        
+      </Routes>
+    </BrowserRouter>
   )
 }
 
-export default App
+export default App;
