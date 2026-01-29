@@ -215,7 +215,7 @@ const DashboardFinanceiro = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl pt-32 mt-24 shadow-xl overflow-hidden flex flex-col md:flex-row min-h-200">
+    <div className="bg-white rounded-2xl p-6 mt-32 shadow-xl overflow-hidden flex flex-col md:flex-row">
       
       {/* 2. ADICIONEI O COMPONENTE VISUAL AQUI */}
       <Toaster position="top-right" reverseOrder={false} />
@@ -264,6 +264,7 @@ const DashboardFinanceiro = () => {
                     setFile(e.target.files[0]);
                     toast.success("PDF selecionado!");
                 }
+                e.target.value = '';    
               }}
               accept=".pdf" 
             />
@@ -309,7 +310,7 @@ const DashboardFinanceiro = () => {
           </span>
         </h3>
         
-        <div className="flex-1 overflow-y-auto space-y-3 pr-2 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-slate-400">
+        <div className="flex-1 overflow-y-auto space-y-3 pr-2 max-h-125 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-slate-400">
           {listaRelatorios.length === 0 ? (
             <p className="text-slate-400 text-sm text-center py-10">Nenhum relatório encontrado.</p>
           ) : (

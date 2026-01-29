@@ -2,7 +2,7 @@ import DashboardFinanceiro from "../components/DashboardFinanceiro";
 
 function Admin() {
     return (
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto items-start">
             <h1>Admin Page - Área Restrita</h1>
             <DashboardFinanceiro />
         </div>
